@@ -1,5 +1,5 @@
 import { Instagram, Facebook } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/wkdrinks-logo.jpeg";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -18,7 +18,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <img src={logo} alt="ABS Bartenders" className="h-10 w-10" />
+              <div className="relative h-10 w-10 rounded-full overflow-hidden bg-white p-0.5">
+                <img src={logo} alt="ABS Bartenders" className="h-full w-full object-cover rounded-full" />
+              </div>
               <span className="text-xl font-bold text-primary">ABS Bartenders</span>
             </div>
             <p className="text-muted-foreground mb-4">

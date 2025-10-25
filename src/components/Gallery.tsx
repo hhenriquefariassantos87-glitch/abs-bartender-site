@@ -1,0 +1,137 @@
+import { Card } from "@/components/ui/card";
+import { useState } from "react";
+import { Play } from "lucide-react";
+
+const Gallery = () => {
+  const [selectedMedia, setSelectedMedia] = useState<{ type: "image" | "video"; src: string } | null>(null);
+
+  // Vídeos de exemplo de bartenders (você pode substituir por URLs reais)
+  const videos = [
+    {
+      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      title: "Bartender Flair Show",
+    },
+    {
+      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
+      title: "Mixologia Profissional",
+    },
+  ];
+
+  // Fotos da galeria (usando as imagens já existentes)
+  const photos = [
+    { src: "/placeholder.svg", title: "Evento 1" },
+    { src: "/placeholder.svg", title: "Evento 2" },
+    { src: "/placeholder.svg", title: "Evento 3" },
+    { src: "/placeholder.svg", title: "Evento 4" },
+    { src: "/placeholder.svg", title: "Evento 5" },
+    { src: "/placeholder.svg", title: "Evento 6" },
+  ];
+
+  return (
+    <section className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            Nossa <span className="text-primary">Galeria</span>
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Confira nossos bartenders em ação e eventos realizados
+          </p>
+        </div>
+
+        {/* Vídeos Section */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold mb-8 text-center text-foreground">
+            Bartenders em Ação
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {videos.map((video, index) => (
+              <Card
+                key={index}
+                className="group cursor-pointer overflow-hidden hover:shadow-glow transition-all duration-300 bg-card border-border"
+                onClick={() => setSelectedMedia({ type: "video", src: video.src })}
+              >
+                <div className="relative h-64 overflow-hidden">
+                  <img
+                    src={video.thumbnail}
+                    alt={video.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/50 flex items-center justify-center group-hover:bg-black/30 transition-colors">
+                    <div className="bg-primary rounded-full p-4 group-hover:scale-110 transition-transform">
+                      <Play className="h-8 w-8 text-primary-foreground fill-current" />
+                    </div>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                    <p className="text-foreground font-semibold">{video.title}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* Fotos Section */}
+        <div>
+          <h3 className="text-3xl font-bold mb-8 text-center text-foreground">
+            Eventos Realizados
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {photos.map((photo, index) => (
+              <Card
+                key={index}
+                className="group cursor-pointer overflow-hidden hover:shadow-glow transition-all duration-300 bg-card border-border"
+                onClick={() => setSelectedMedia({ type: "image", src: photo.src })}
+              >
+                <div className="h-64 overflow-hidden">
+                  <img
+                    src={photo.src}
+                    alt={photo.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Modal para visualização */}
+      {selectedMedia && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedMedia(null)}
+        >
+          <div className="relative max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setSelectedMedia(null)}
+              className="absolute -top-12 right-0 text-foreground hover:text-primary text-2xl font-bold"
+            >
+              ✕
+            </button>
+            {selectedMedia.type === "video" ? (
+              <div className="aspect-video">
+                <iframe
+                  src={selectedMedia.src}
+                  className="w-full h-full rounded-lg"
+                  allowFullScreen
+                  title="Video Player"
+                />
+              </div>
+            ) : (
+              <img
+                src={selectedMedia.src}
+                alt="Preview"
+                className="w-full h-auto rounded-lg"
+              />
+            )}
+          </div>
+        </div>
+      )}
+    </section>
+  );
+};
+
+export default Gallery;

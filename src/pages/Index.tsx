@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Events from "@/components/Events";
 import Differentials from "@/components/Differentials";
+import Gallery from "@/components/Gallery";
 import About from "@/components/About";
 import Packages from "@/components/Packages";
 import Counters from "@/components/Counters";
@@ -18,6 +19,7 @@ const Index = () => {
       <Services />
       <Events />
       <Differentials />
+      <Gallery />
       <About />
       <Packages />
       <Counters />
