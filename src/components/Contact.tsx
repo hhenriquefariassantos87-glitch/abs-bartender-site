@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -11,7 +12,7 @@ const Contact = () => {
     nome: "",
     email: "",
     telefone: "",
-    plano: "",
+    tipoFesta: "",
     data: "",
     convidados: "",
     mensagem: "",
@@ -19,7 +20,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Olá! Gostaria de solicitar um orçamento:\n\nNome: ${formData.nome}\nEmail: ${formData.email}\nTelefone: ${formData.telefone}\nPlano: ${formData.plano}\nData do Evento: ${formData.data}\nNúmero de Convidados: ${formData.convidados}\nMensagem: ${formData.mensagem}`;
+    const message = `Olá! Gostaria de solicitar um orçamento:\n\nNome: ${formData.nome}\nEmail: ${formData.email}\nTelefone: ${formData.telefone}\nTipo de Festa: ${formData.tipoFesta}\nData do Evento: ${formData.data}\nNúmero de Convidados: ${formData.convidados}\nMensagem: ${formData.mensagem}`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/5511982844587?text=${encodedMessage}`, "_blank");
     toast.success("Redirecionando para WhatsApp...");
@@ -75,12 +76,16 @@ const Contact = () => {
                       required
                       className="bg-background border-border"
                     />
-                    <Input
-                      placeholder="Plano desejado"
-                      value={formData.plano}
-                      onChange={(e) => setFormData({ ...formData, plano: e.target.value })}
-                      className="bg-background border-border"
-                    />
+                    <Select value={formData.tipoFesta} onValueChange={(value) => setFormData({ ...formData, tipoFesta: value })}>
+                      <SelectTrigger className="bg-background border-border">
+                        <SelectValue placeholder="Tipo de Festa" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-popover border-border z-50">
+                        <SelectItem value="casamento">Casamento</SelectItem>
+                        <SelectItem value="formatura">Formatura</SelectItem>
+                        <SelectItem value="festa-aniversario">Festa de Aniversário</SelectItem>
+                      </SelectContent>
+                    </Select>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <Input
