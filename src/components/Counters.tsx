@@ -1,14 +1,19 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Wine } from "lucide-react";
+import balcaoClassico from "@/assets/balcao-classico.jpg";
+import balcaoPremium from "@/assets/balcao-premium.jpg";
+import balcaoRustico from "@/assets/balcao-rustico.jpg";
+import balcaoModerno from "@/assets/balcao-moderno.jpg";
+import balcaoPersonalizado from "@/assets/balcao-personalizado.jpg";
+import barMovel from "@/assets/bar-movel.jpg";
 
 const Counters = () => {
   const counters = [
-    { name: "Balcão Clássico", description: "Elegante e versátil" },
-    { name: "Balcão Premium", description: "Design com LED integrada" },
-    { name: "Balcão Rústico", description: "Para eventos ao ar livre" },
-    { name: "Balcão Moderno", description: "Linhas contemporâneas" },
-    { name: "Balcão Personalizado", description: "Sob medida" },
-    { name: "Bar Móvel", description: "Praticidade e estilo" },
+    { name: "Balcão Clássico", description: "Elegante e versátil", image: balcaoClassico },
+    { name: "Balcão Premium", description: "Design com LED integrada", image: balcaoPremium },
+    { name: "Balcão Rústico", description: "Para eventos ao ar livre", image: balcaoRustico },
+    { name: "Balcão Moderno", description: "Linhas contemporâneas", image: balcaoModerno },
+    { name: "Balcão Personalizado", description: "Sob medida", image: balcaoPersonalizado },
+    { name: "Bar Móvel", description: "Praticidade e estilo", image: barMovel },
   ];
 
   return (
@@ -27,18 +32,19 @@ const Counters = () => {
           {counters.map((counter) => (
             <Card
               key={counter.name}
-              className="hover:shadow-glow transition-all duration-300 bg-card border-border"
+              className="hover:shadow-glow transition-all duration-300 bg-card border-border overflow-hidden group"
             >
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={counter.image} 
+                  alt={counter.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
+              </div>
               <CardContent className="p-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-gradient-accent">
-                    <Wine className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold mb-2 text-foreground">{counter.name}</h3>
-                    <p className="text-muted-foreground">{counter.description}</p>
-                  </div>
-                </div>
+                <h3 className="text-xl font-bold mb-2 text-foreground">{counter.name}</h3>
+                <p className="text-muted-foreground">{counter.description}</p>
               </CardContent>
             </Card>
           ))}
