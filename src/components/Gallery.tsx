@@ -12,17 +12,22 @@ import galeriaDrinks from "@/assets/gallery-drinks-profissionais.jpg";
 const Gallery = () => {
   const [selectedMedia, setSelectedMedia] = useState<{ type: "image" | "video"; src: string } | null>(null);
 
-  // Vídeos de exemplo de bartenders (você pode substituir por URLs reais)
+  // Vídeos de bartenders profissionais
   const videos = [
     {
-      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-      src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      title: "Bartender Flair Show",
+      thumbnail: "https://img.youtube.com/vi/jPUnWFDAPrw/maxresdefault.jpg",
+      src: "https://www.youtube.com/embed/jPUnWFDAPrw",
+      title: "Como Fazer Mojito Clássico",
     },
     {
-      thumbnail: "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
-      src: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      title: "Mixologia Profissional",
+      thumbnail: "https://img.youtube.com/vi/8cE0MStFlAg/maxresdefault.jpg",
+      src: "https://www.youtube.com/embed/8cE0MStFlAg",
+      title: "Flair Bartending - Show Profissional",
+    },
+    {
+      thumbnail: "https://img.youtube.com/vi/UD7AszFGxDc/maxresdefault.jpg",
+      src: "https://www.youtube.com/embed/UD7AszFGxDc",
+      title: "Caipirinha Perfeita - Técnicas Profissionais",
     },
   ];
 
