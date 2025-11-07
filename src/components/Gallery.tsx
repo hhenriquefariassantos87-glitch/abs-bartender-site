@@ -1,6 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { useState } from "react";
 import { Play } from "lucide-react";
+import galeria1 from "@/assets/gallery-evento-1.jpg";
+import galeria2 from "@/assets/gallery-evento-2.jpg";
+import galeria3 from "@/assets/gallery-evento-3.jpg";
+import galeria4 from "@/assets/gallery-evento-4.jpg";
+import galeria5 from "@/assets/gallery-evento-5.jpg";
+import galeria6 from "@/assets/gallery-evento-6.jpg";
 
 const Gallery = () => {
   const [selectedMedia, setSelectedMedia] = useState<{ type: "image" | "video"; src: string } | null>(null);
@@ -19,14 +25,14 @@ const Gallery = () => {
     },
   ];
 
-  // Fotos da galeria (usando as imagens já existentes)
+  // Fotos da galeria
   const photos = [
-    { src: "/placeholder.svg", title: "Evento 1" },
-    { src: "/placeholder.svg", title: "Evento 2" },
-    { src: "/placeholder.svg", title: "Evento 3" },
-    { src: "/placeholder.svg", title: "Evento 4" },
-    { src: "/placeholder.svg", title: "Evento 5" },
-    { src: "/placeholder.svg", title: "Evento 6" },
+    { src: galeria1, title: "Flair Bartending em Casamento" },
+    { src: galeria2, title: "Bar Corporativo Moderno" },
+    { src: galeria3, title: "Festa de Aniversário" },
+    { src: galeria4, title: "Formatura Elegante" },
+    { src: galeria5, title: "Bar Móvel ao Ar Livre" },
+    { src: galeria6, title: "Evento Premium Noturno" },
   ];
 
   return (
