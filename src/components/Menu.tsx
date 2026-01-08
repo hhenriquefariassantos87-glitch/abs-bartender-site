@@ -1,4 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
+import { useState } from "react";
 import drinkMojito from "@/assets/drink-mojito.jpg";
 import drinkCaipirinha from "@/assets/drink-caipirinha.jpg";
 import drinkGinTonica from "@/assets/drink-gin-tonica.jpg";
@@ -10,6 +11,8 @@ import drinkPinaColada from "@/assets/drink-pina-colada.jpg";
 import drinkAperolSpritz from "@/assets/drink-aperol-spritz.jpg";
 
 const Menu = () => {
+  const [selectedDrink, setSelectedDrink] = useState<{ name: string; image: string } | null>(null);
+
   const drinks = [
     {
       name: "Mojito",
@@ -74,7 +77,8 @@ const Menu = () => {
           {drinks.map((drink) => (
             <Card
               key={drink.name}
-              className="overflow-hidden hover:shadow-glow transition-all duration-300 bg-card border-border group"
+              className="overflow-hidden hover:shadow-glow transition-all duration-300 bg-card border-border group cursor-pointer"
+              onClick={() => setSelectedDrink({ name: drink.name, image: drink.image })}
             >
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -94,6 +98,29 @@ const Menu = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal para visualização expandida */}
+      {selectedDrink && (
+        <div
+          className="fixed inset-0 bg-background/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedDrink(null)}
+        >
+          <div className="relative max-w-4xl w-full">
+            <button
+              onClick={() => setSelectedDrink(null)}
+              className="absolute -top-12 right-0 text-foreground hover:text-primary text-4xl transition-colors"
+            >
+              ✕
+            </button>
+            <img
+              src={selectedDrink.image}
+              alt={selectedDrink.name}
+              className="w-full h-auto rounded-lg max-h-[80vh] object-contain"
+            />
+            <p className="text-center text-foreground text-xl font-bold mt-4">{selectedDrink.name}</p>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
