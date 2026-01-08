@@ -19,9 +19,9 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <div className="relative h-10 w-10 rounded-full overflow-hidden bg-white p-0.5">
-                <img src={logo} alt="ABS Bartenders" className="h-full w-full object-cover rounded-full" />
+                <img src={logo} alt="Moustache Drinks" className="h-full w-full object-cover rounded-full" />
               </div>
-              <span className="text-xl font-bold text-primary">ABS Bartenders</span>
+              <span className="text-xl font-script text-white">Moustache Drinks</span>
             </div>
             <p className="text-muted-foreground mb-4">
               Transformando eventos em experiências inesquecíveis há mais de 10 anos.
@@ -73,7 +73,7 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4 text-foreground">Contato</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li>(11) 98284-4587</li>
-              <li>contato@absbartenders.com.br</li>
+              <li>contato@moustachedrinks.com.br</li>
               <li>São Paulo, SP</li>
               <li className="text-sm">Seg-Sex: 9h-18h | Sáb: 9h-14h</li>
             </ul>
@@ -81,7 +81,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-border pt-8 text-center text-muted-foreground">
-          <p>© 2025 ABS Bartenders. Todos os direitos reservados.</p>
+          <p>© 2025 Moustache Drinks. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>

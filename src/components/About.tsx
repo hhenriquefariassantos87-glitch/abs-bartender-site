@@ -14,14 +14,14 @@ const About = () => {
             <div className="absolute inset-0 bg-gradient-primary opacity-20 blur-3xl rounded-full"></div>
             <img
               src={teamPhoto}
-              alt="Equipe ABS Bartenders"
+              alt="Equipe Moustache Drinks"
               className="relative rounded-2xl shadow-card w-full"
             />
           </div>
 
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Sobre a <span className="text-primary">ABS Bartenders</span>
+              Sobre a <span className="text-primary font-script">Moustache Drinks</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               Há mais de 10 anos no mercado, somos especializados em criar experiências inesquecíveis
