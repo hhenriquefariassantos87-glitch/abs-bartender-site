@@ -31,9 +31,9 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-3 cursor-pointer" onClick={() => scrollToSection("início")}>
             <div className="relative h-14 w-14 rounded-full overflow-hidden bg-white p-1 transition-all">
-              <img src={logo} alt="ABS Bartenders" className="h-full w-full object-cover rounded-full" />
+              <img src={logo} alt="Moustache Drinks" className="h-full w-full object-cover rounded-full" />
             </div>
-            <span className="text-2xl font-bold text-primary">ABS Bartenders</span>
+            <span className="text-2xl font-script text-white">Moustache Drinks</span>
           </div>
 
           <nav className="hidden md:flex items-center gap-8">

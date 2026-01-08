@@ -28,7 +28,7 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: Phone, label: "Telefone", value: "(11) 98284-4587" },
-    { icon: Mail, label: "Email", value: "contato@absbartenders.com.br" },
+    { icon: Mail, label: "Email", value: "contato@moustachedrinks.com.br" },
     { icon: MapPin, label: "Localização", value: "São Paulo, SP" },
     { icon: Clock, label: "Horário", value: "Seg-Sex: 9h-18h | Sáb: 9h-14h" },
   ];
