@@ -7,6 +7,7 @@ import galeria4 from "@/assets/gallery-evento-4.jpg";
 import galeria5 from "@/assets/gallery-evento-5.jpg";
 import galeria6 from "@/assets/gallery-evento-6.jpg";
 import galeriaDrinks from "@/assets/gallery-drinks-profissionais.jpg";
+import drinkAperolNovo from "@/assets/drink-aperol-novo.jpg";
 
 const Gallery = () => {
   const [selectedMedia, setSelectedMedia] = useState<string | null>(null);
@@ -20,6 +21,7 @@ const Gallery = () => {
     { src: galeria5, title: "Bar Móvel ao Ar Livre" },
     { src: galeria6, title: "Evento Premium Noturno" },
     { src: galeriaDrinks, title: "Drinks Profissionais" },
+    { src: drinkAperolNovo, title: "Aperol Spritz Especial" },
   ];
 
   return (
