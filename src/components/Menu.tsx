@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import drinkMojito from "@/assets/drink-mojito.jpg";
 import drinkCaipirinha from "@/assets/drink-caipirinha.jpg";
 import drinkGinTonica from "@/assets/drink-gin-tonica.jpg";
-import drinkCosmopolitan from "@/assets/drink-cosmopolitan.jpg";
+import drinkEspecial from "@/assets/drink-especial.jpg";
 import drinkOldFashioned from "@/assets/drink-old-fashioned.jpg";
 import drinkNegroni from "@/assets/drink-negroni.jpg";
 import drinkMargarita from "@/assets/drink-margarita.jpg";
@@ -27,9 +27,9 @@ const Menu = () => {
       image: drinkGinTonica,
     },
     {
-      name: "Cosmopolitan",
-      description: "Vodka, cranberry e triple sec",
-      image: drinkCosmopolitan,
+      name: "Drink Especial",
+      description: "Drink exclusivo da casa",
+      image: drinkEspecial,
     },
     {
       name: "Old Fashioned",
