@@ -1,5 +1,5 @@
 import { Instagram, Facebook } from "lucide-react";
-import logo from "@/assets/wkdrinks-logo.jpeg";
+import logo from "@/assets/moustache-logo.jpg";
 
 const Footer = () => {
   const scrollToSection = (id: string) => {
