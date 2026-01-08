@@ -8,7 +8,7 @@ import drinkOldFashioned from "@/assets/drink-old-fashioned.jpg";
 import drinkNegroni from "@/assets/drink-negroni.jpg";
 import drinkMargarita from "@/assets/drink-margarita.jpg";
 import drinkPinaColada from "@/assets/drink-pina-colada.jpg";
-import drinkAperolSpritz from "@/assets/drink-aperol-spritz.jpg";
+import drinkAperolSpritz from "@/assets/drink-aperol-novo.jpg";
 
 const Menu = () => {
   const [selectedDrink, setSelectedDrink] = useState<{ name: string; image: string } | null>(null);
