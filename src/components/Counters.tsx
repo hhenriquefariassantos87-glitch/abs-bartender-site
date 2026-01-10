@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { X } from "lucide-react";
 import balcaoClassico from "@/assets/balcao-classico.jpg";
 import balcaoPremiumNovo from "@/assets/balcao-premium-novo.jpg";
-import balcaoRustico from "@/assets/balcao-rustico.jpg";
+import balcaoRusticoNovo from "@/assets/balcao-rustico-novo.jpg";
 import balcaoModerno from "@/assets/balcao-moderno.jpg";
 import balcaoPersonalizado from "@/assets/balcao-personalizado.jpg";
 import barMovel from "@/assets/bar-movel.jpg";
@@ -14,7 +14,7 @@ const Counters = () => {
   const counters = [
     { name: "Balcão Clássico", description: "Elegante e versátil", image: balcaoClassico },
     { name: "Balcão Premium", description: "Design com LED integrada", image: balcaoPremiumNovo },
-    { name: "Balcão Rústico", description: "Para eventos ao ar livre", image: balcaoRustico },
+    { name: "Balcão Rústico", description: "Para eventos ao ar livre", image: balcaoRusticoNovo },
     { name: "Balcão Moderno", description: "Linhas contemporâneas", image: balcaoModerno },
     { name: "Balcão Personalizado", description: "Sob medida", image: balcaoPersonalizado },
     { name: "Bar Móvel", description: "Praticidade e estilo", image: barMovel },
