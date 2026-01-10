@@ -39,11 +39,11 @@ const Counters = () => {
               className="hover:shadow-glow transition-all duration-300 bg-card border-border overflow-hidden group cursor-pointer"
               onClick={() => setSelectedCounter(counter)}
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-56 overflow-hidden flex items-center justify-center bg-black/20">
                 <img 
                   src={counter.image} 
                   alt={counter.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
               </div>
