@@ -1,15 +1,19 @@
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { X } from "lucide-react";
 import balcaoClassico from "@/assets/balcao-classico.jpg";
-import balcaoPremium from "@/assets/balcao-premium.jpg";
+import balcaoPremiumNovo from "@/assets/balcao-premium-novo.jpg";
 import balcaoRustico from "@/assets/balcao-rustico.jpg";
 import balcaoModerno from "@/assets/balcao-moderno.jpg";
 import balcaoPersonalizado from "@/assets/balcao-personalizado.jpg";
 import barMovel from "@/assets/bar-movel.jpg";
 
 const Counters = () => {
+  const [selectedCounter, setSelectedCounter] = useState<{ name: string; image: string } | null>(null);
+
   const counters = [
     { name: "Balcão Clássico", description: "Elegante e versátil", image: balcaoClassico },
-    { name: "Balcão Premium", description: "Design com LED integrada", image: balcaoPremium },
+    { name: "Balcão Premium", description: "Design com LED integrada", image: balcaoPremiumNovo },
     { name: "Balcão Rústico", description: "Para eventos ao ar livre", image: balcaoRustico },
     { name: "Balcão Moderno", description: "Linhas contemporâneas", image: balcaoModerno },
     { name: "Balcão Personalizado", description: "Sob medida", image: balcaoPersonalizado },
@@ -32,7 +36,8 @@ const Counters = () => {
           {counters.map((counter) => (
             <Card
               key={counter.name}
-              className="hover:shadow-glow transition-all duration-300 bg-card border-border overflow-hidden group"
+              className="hover:shadow-glow transition-all duration-300 bg-card border-border overflow-hidden group cursor-pointer"
+              onClick={() => setSelectedCounter(counter)}
             >
               <div className="relative h-48 overflow-hidden">
                 <img 
@@ -50,6 +55,30 @@ const Counters = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal para exibir imagem expandida */}
+      {selectedCounter && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setSelectedCounter(null)}
+        >
+          <button
+            onClick={() => setSelectedCounter(null)}
+            className="absolute top-4 right-4 text-white hover:text-primary transition-colors z-50"
+          >
+            <X className="h-8 w-8" />
+          </button>
+          <div className="max-w-4xl max-h-[90vh] w-full">
+            <img 
+              src={selectedCounter.image} 
+              alt={selectedCounter.name}
+              className="w-full h-full object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <p className="text-white text-center mt-4 text-xl font-semibold">{selectedCounter.name}</p>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
