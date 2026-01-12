@@ -53,18 +53,11 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service) => (
             <Card key={service.title} className="overflow-hidden hover:shadow-glow transition-all duration-300 bg-card border-border">
-              <div className={`overflow-hidden bg-background ${
-                service.title === "Estrutura Completa" ? "h-96" : 
-                service.title === "Drinks Exclusivos" ? "h-80" : "h-64"
-              }`}>
+              <div className="overflow-hidden bg-background h-80">
                 <img
                   src={service.image}
                   alt={service.title}
-                  className={`w-full h-full hover:scale-110 transition-transform duration-300 ${
-                    service.title === "Estrutura Completa" || service.title === "Drinks Exclusivos" 
-                      ? "object-contain" 
-                      : "object-cover"
-                  }`}
+                  className="w-full h-full hover:scale-110 transition-transform duration-300 object-contain"
                 />
               </div>
               <CardContent className="p-6">
