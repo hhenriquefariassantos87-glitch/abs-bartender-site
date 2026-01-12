@@ -53,7 +53,7 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service) => (
             <Card key={service.title} className="overflow-hidden hover:shadow-glow transition-all duration-300 bg-card border-border">
-              <div className={`overflow-hidden bg-background ${service.title === "Estrutura Completa" ? "h-72" : "h-64"}`}>
+              <div className={`overflow-hidden bg-background ${service.title === "Estrutura Completa" ? "h-96" : "h-64"}`}>
                 <img
                   src={service.image}
                   alt={service.title}
