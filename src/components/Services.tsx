@@ -73,6 +73,25 @@ const Services = () => {
                     />
                   </DialogContent>
                 </Dialog>
+              ) : service.title === "Estrutura Completa" ? (
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="overflow-hidden bg-background h-80 cursor-pointer">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full hover:scale-110 transition-transform duration-300 object-cover"
+                      />
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl p-0 bg-transparent border-none">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </DialogContent>
+                </Dialog>
               ) : (
                 <div className="overflow-hidden bg-background h-80">
                   <img
