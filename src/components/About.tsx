@@ -19,7 +19,7 @@ const About = () => {
             <img
               src={teamPhoto}
               alt="Equipe Moustache Drinks"
-              className="relative rounded-2xl shadow-card w-full h-[400px] object-cover cursor-pointer hover:scale-[1.02] transition-transform duration-300"
+              className="relative rounded-2xl shadow-card w-full cursor-pointer hover:scale-[1.02] transition-transform duration-300"
               onClick={() => setIsExpanded(true)}
             />
           </div>
