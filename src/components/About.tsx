@@ -1,6 +1,10 @@
+import { useState } from "react";
+import { X } from "lucide-react";
 import teamPhoto from "@/assets/team-photo.jpg";
 
 const About = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   const stats = [
     { value: "500+", label: "Eventos Realizados" },
     { value: "10+", label: "Anos de Experiência" },
@@ -15,7 +19,8 @@ const About = () => {
             <img
               src={teamPhoto}
               alt="Equipe Moustache Drinks"
-              className="relative rounded-2xl shadow-card w-full"
+              className="relative rounded-2xl shadow-card w-full h-[400px] object-cover cursor-pointer hover:scale-[1.02] transition-transform duration-300"
+              onClick={() => setIsExpanded(true)}
             />
           </div>
 
@@ -44,6 +49,27 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal de expansão */}
+      {isExpanded && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setIsExpanded(false)}
+        >
+          <button
+            className="absolute top-4 right-4 text-white hover:text-primary transition-colors"
+            onClick={() => setIsExpanded(false)}
+          >
+            <X className="w-8 h-8" />
+          </button>
+          <img
+            src={teamPhoto}
+            alt="Equipe Moustache Drinks"
+            className="max-w-full max-h-[90vh] object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 };
