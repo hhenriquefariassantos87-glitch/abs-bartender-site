@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import galeria1 from "@/assets/gallery-evento-1.jpg";
 import galeria2 from "@/assets/gallery-evento-2.jpg";
 import galeria3 from "@/assets/gallery-evento-3.jpg";
@@ -9,9 +9,37 @@ import galeria6 from "@/assets/gallery-evento-6.jpg";
 import galeriaDrinks from "@/assets/gallery-drinks-profissionais.jpg";
 import drinkAperolNovo from "@/assets/drink-aperol-novo.jpg";
 import galeria7 from "@/assets/gallery-evento-7.jpg";
+import videoEvento from "@/assets/video-evento.mp4";
 
 const Gallery = () => {
   const [selectedMedia, setSelectedMedia] = useState<string | null>(null);
+  const [videoExpanded, setVideoExpanded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoContainerRef = useRef<HTMLDivElement>(null);
+
+  // Autoplay quando visível
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (videoRef.current) {
+            if (entry.isIntersecting) {
+              videoRef.current.play();
+            } else {
+              videoRef.current.pause();
+            }
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (videoContainerRef.current) {
+      observer.observe(videoContainerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   // Fotos da galeria
   const photos = [
@@ -58,9 +86,33 @@ const Gallery = () => {
             ))}
           </div>
         </div>
+
+        {/* Video Section */}
+        <div className="mt-16" ref={videoContainerRef}>
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold">
+              Veja nosso <span className="text-primary">trabalho</span>
+            </h3>
+          </div>
+          <div 
+            className="max-w-4xl mx-auto cursor-pointer"
+            onClick={() => setVideoExpanded(true)}
+          >
+            <Card className="overflow-hidden hover:shadow-glow transition-all duration-300 bg-card border-border">
+              <video
+                ref={videoRef}
+                src={videoEvento}
+                className="w-full h-auto"
+                muted
+                loop
+                playsInline
+              />
+            </Card>
+          </div>
+        </div>
       </div>
 
-      {/* Modal para visualização */}
+      {/* Modal para fotos */}
       {selectedMedia && (
         <div
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
@@ -77,6 +129,30 @@ const Gallery = () => {
               src={selectedMedia}
               alt="Preview"
               className="w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Modal para vídeo expandido */}
+      {videoExpanded && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setVideoExpanded(false)}
+        >
+          <div className="relative max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setVideoExpanded(false)}
+              className="absolute -top-12 right-0 text-foreground hover:text-primary text-2xl font-bold"
+            >
+              ✕
+            </button>
+            <video
+              src={videoEvento}
+              className="w-full h-auto rounded-lg"
+              controls
+              autoPlay
+              playsInline
             />
           </div>
         </div>
