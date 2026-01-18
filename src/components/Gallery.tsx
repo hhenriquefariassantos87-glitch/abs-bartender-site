@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card";
 import { useState, useRef, useEffect } from "react";
 import galeria1 from "@/assets/gallery-limoes-licor.jpg";
 import galeria2 from "@/assets/gallery-evento-2.jpg";
-import galeria3 from "@/assets/gallery-evento-3.jpg";
+import galeria3 from "@/assets/gallery-bar-setup.jpg";
 import galeria4 from "@/assets/gallery-evento-4.jpg";
 import galeria5 from "@/assets/gallery-evento-5.jpg";
 import galeria6 from "@/assets/gallery-evento-6.jpg";
@@ -45,7 +45,7 @@ const Gallery = () => {
   const photos = [
     { src: galeria1, title: "Limões e Licor de Morango" },
     { src: galeria2, title: "Bar Corporativo Moderno" },
-    { src: galeria3, title: "Festa de Aniversário" },
+    { src: galeria3, title: "Estação de Bar Profissional" },
     { src: galeria4, title: "Formatura Elegante" },
     { src: galeria5, title: "Bar Móvel ao Ar Livre" },
     { src: galeria6, title: "Evento Premium Noturno" },
