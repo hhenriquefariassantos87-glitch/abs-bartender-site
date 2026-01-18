@@ -15,12 +15,14 @@ const Contact = () => {
     tipoFesta: "",
     data: "",
     convidados: "",
+    endereco: "",
+    cep: "",
     mensagem: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const message = `Olá! Gostaria de solicitar um orçamento:\n\nNome: ${formData.nome}\nEmail: ${formData.email}\nTelefone: ${formData.telefone}\nTipo de Festa: ${formData.tipoFesta}\nData do Evento: ${formData.data}\nNúmero de Convidados: ${formData.convidados}\nMensagem: ${formData.mensagem}`;
+    const message = `Olá! Gostaria de solicitar um orçamento:\n\nNome: ${formData.nome}\nEmail: ${formData.email}\nTelefone: ${formData.telefone}\nTipo de Festa: ${formData.tipoFesta}\nData do Evento: ${formData.data}\nNúmero de Convidados: ${formData.convidados}\nEndereço: ${formData.endereco}\nCEP: ${formData.cep}\nMensagem: ${formData.mensagem}`;
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/5511982844587?text=${encodedMessage}`, "_blank");
     toast.success("Redirecionando para WhatsApp...");
@@ -100,6 +102,20 @@ const Contact = () => {
                       placeholder="Número de convidados"
                       value={formData.convidados}
                       onChange={(e) => setFormData({ ...formData, convidados: e.target.value })}
+                      className="bg-background border-border"
+                    />
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <Input
+                      placeholder="Endereço do evento"
+                      value={formData.endereco}
+                      onChange={(e) => setFormData({ ...formData, endereco: e.target.value })}
+                      className="bg-background border-border"
+                    />
+                    <Input
+                      placeholder="CEP"
+                      value={formData.cep}
+                      onChange={(e) => setFormData({ ...formData, cep: e.target.value })}
                       className="bg-background border-border"
                     />
                   </div>
