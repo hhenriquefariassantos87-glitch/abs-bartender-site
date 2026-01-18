@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { useState, useRef, useEffect } from "react";
-import galeria1 from "@/assets/gallery-evento-1.jpg";
+import galeria1 from "@/assets/gallery-limoes-licor.jpg";
 import galeria2 from "@/assets/gallery-evento-2.jpg";
 import galeria3 from "@/assets/gallery-evento-3.jpg";
 import galeria4 from "@/assets/gallery-evento-4.jpg";
@@ -43,7 +43,7 @@ const Gallery = () => {
 
   // Fotos da galeria
   const photos = [
-    { src: galeria1, title: "Flair Bartending em Casamento" },
+    { src: galeria1, title: "Limões e Licor de Morango" },
     { src: galeria2, title: "Bar Corporativo Moderno" },
     { src: galeria3, title: "Festa de Aniversário" },
     { src: galeria4, title: "Formatura Elegante" },
