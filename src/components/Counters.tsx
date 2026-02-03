@@ -68,11 +68,11 @@ const Counters = () => {
           >
             <X className="h-8 w-8" />
           </button>
-          <div className="max-w-4xl max-h-[90vh] w-full">
+          <div className="flex flex-col items-center justify-center max-h-[90vh]">
             <img 
               src={selectedCounter.image} 
               alt={selectedCounter.name}
-              className="w-full h-full object-contain rounded-lg"
+              className="max-w-full max-h-[80vh] object-contain rounded-lg"
               onClick={(e) => e.stopPropagation()}
             />
             <p className="text-white text-center mt-4 text-xl font-semibold">{selectedCounter.name}</p>
