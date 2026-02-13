@@ -9,6 +9,7 @@ import drinkNegroni from "@/assets/drink-negroni.jpg";
 import drinkMargarita from "@/assets/drink-margarita.jpg";
 import drinkPinaColada from "@/assets/drink-pina-colada.jpg";
 import drinkAperolSpritz from "@/assets/drink-aperol-novo.jpg";
+import drinkMoustache from "@/assets/drink-moustache.jpg";
 
 const Menu = () => {
   const [selectedDrink, setSelectedDrink] = useState<{ name: string; image: string } | null>(null);
@@ -58,6 +59,11 @@ const Menu = () => {
       name: "Aperol Spritz",
       description: "Aperol, prosecco e soda",
       image: drinkAperolSpritz,
+    },
+    {
+      name: "Moustache Drink",
+      description: "Drink signature da casa",
+      image: drinkMoustache,
     },
   ];
 
