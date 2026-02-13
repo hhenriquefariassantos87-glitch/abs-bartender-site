@@ -12,6 +12,7 @@ import drinkAperolSpritz from "@/assets/drink-aperol-novo.jpg";
 import drinkMoustache from "@/assets/drink-moustache.jpg";
 import drinkTropical from "@/assets/drink-tropical.jpg";
 import drinkMoscowMule from "@/assets/drink-moscow-mule.jpg";
+import drinkMaracuja from "@/assets/drink-maracuja.jpg";
 
 const Menu = () => {
   const [selectedDrink, setSelectedDrink] = useState<{ name: string; image: string } | null>(null);
@@ -76,6 +77,11 @@ const Menu = () => {
       name: "Moscow Mule",
       description: "Vodka, gengibre e limão na caneca de cobre",
       image: drinkMoscowMule,
+    },
+    {
+      name: "Drink Maracujá",
+      description: "Drink cremoso de maracujá com espuma",
+      image: drinkMaracuja,
     },
   ];
 
