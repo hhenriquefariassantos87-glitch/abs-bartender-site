@@ -89,7 +89,6 @@ const Menu = () => {
       name: "Drink Maracujá",
       description: "Drink cremoso de maracujá com espuma",
       image: drinkMaracuja,
-      contain: true,
     },
   ];
 
@@ -112,11 +111,11 @@ const Menu = () => {
               className="overflow-hidden hover:shadow-glow transition-all duration-300 bg-card border-border group cursor-pointer"
               onClick={() => setSelectedDrink({ name: drink.name, image: drink.image })}
             >
-              <div className={`relative h-64 overflow-hidden ${drink.contain ? 'bg-background' : ''}`}>
+              <div className="relative h-64 overflow-hidden">
                 <img
                   src={drink.image}
                   alt={drink.name}
-                  className={`w-full h-full transition-transform duration-500 group-hover:scale-110 ${drink.contain ? 'object-contain' : 'object-cover'}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
