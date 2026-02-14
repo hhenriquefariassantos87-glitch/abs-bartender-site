@@ -106,6 +106,7 @@ const Gallery = () => {
                 muted
                 loop
                 playsInline
+                autoPlay
               />
             </Card>
           </div>
@@ -140,7 +141,7 @@ const Gallery = () => {
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
           onClick={() => setVideoExpanded(false)}
         >
-          <div className="relative max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
+          <div className="relative max-w-3xl w-full" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setVideoExpanded(false)}
               className="absolute -top-12 right-0 text-foreground hover:text-primary text-2xl font-bold"
