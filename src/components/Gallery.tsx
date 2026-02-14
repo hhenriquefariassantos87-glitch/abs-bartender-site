@@ -118,7 +118,7 @@ const Gallery = () => {
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
           onClick={() => setSelectedMedia(null)}
         >
-          <div className="relative max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
+          <div className="relative max-w-3xl w-full" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setSelectedMedia(null)}
               className="absolute -top-12 right-0 text-foreground hover:text-primary text-2xl font-bold"
@@ -128,7 +128,7 @@ const Gallery = () => {
             <img
               src={selectedMedia}
               alt="Preview"
-              className="w-full h-auto rounded-lg"
+              className="w-full max-h-[75vh] object-contain rounded-lg"
             />
           </div>
         </div>
