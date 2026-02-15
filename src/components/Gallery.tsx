@@ -9,6 +9,7 @@ import galeria6 from "@/assets/gallery-evento-6.jpg";
 import galeriaDrinks from "@/assets/gallery-drinks-profissionais.jpg";
 import drinkAperolNovo from "@/assets/drink-aperol-novo.jpg";
 import galeria7 from "@/assets/gallery-evento-7.jpg";
+import galeriaSucos from "@/assets/gallery-sucos-frutas.jpg";
 import videoEvento from "@/assets/video-evento.mp4";
 
 const Gallery = () => {
@@ -43,6 +44,7 @@ const Gallery = () => {
 
   // Fotos da galeria
   const photos = [
+    { src: galeriaSucos, title: "Sucos e Frutas Premium" },
     { src: galeria1, title: "Limões e Licor de Morango" },
     { src: galeria2, title: "Bar Corporativo Moderno" },
     { src: galeria3, title: "Estação de Bar Profissional" },
