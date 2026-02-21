@@ -24,7 +24,7 @@ const Contact = () => {
     e.preventDefault();
     const message = `Olá! Gostaria de solicitar um orçamento:\n\nNome: ${formData.nome}\nEmail: ${formData.email}\nTelefone: ${formData.telefone}\nTipo de Festa: ${formData.tipoFesta}\nData do Evento: ${formData.data}\nNúmero de Convidados: ${formData.convidados}\nEndereço: ${formData.endereco}\nCEP: ${formData.cep}\nMensagem: ${formData.mensagem}`;
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/5511982844587?text=${encodedMessage}`, "_blank");
+    window.open(`https://wa.me/5511943542533?text=${encodedMessage}`, "_blank");
     toast.success("Redirecionando para WhatsApp...");
   };
 
