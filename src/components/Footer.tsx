@@ -72,7 +72,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold mb-4 text-foreground">Contato</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>(11) 98284-4587</li>
+              <li>(11) 94354-2533</li>
               <li>contato@moustachedrinks.com.br</li>
               <li>São Paulo, SP</li>
               <li className="text-sm">Seg-Sex: 9h-18h | Sáb: 9h-14h</li>
