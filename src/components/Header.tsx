@@ -49,7 +49,7 @@ const Header = () => {
           </nav>
 
           <Button
-            onClick={() => window.open("https://wa.me/5511958053806", "_blank")}
+            onClick={() => window.open("https://wa.me/5511943542533", "_blank")}
             className="bg-[#25D366] hover:bg-[#1fb855] text-background gap-2"
           >
             <MessageCircle className="h-4 w-4" />

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const WhatsAppFloat = () => {
   return (
     <Button
-      onClick={() => window.open("https://wa.me/5511958053806", "_blank")}
+      onClick={() => window.open("https://wa.me/5511943542533", "_blank")}
       className="fixed bottom-6 right-6 h-14 w-14 rounded-full bg-[#25D366] hover:bg-[#1fb855] shadow-glow z-50 p-0"
       aria-label="Contato via WhatsApp"
     >
