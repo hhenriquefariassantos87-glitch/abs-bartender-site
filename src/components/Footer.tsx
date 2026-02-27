@@ -75,7 +75,9 @@ const Footer = () => {
               <li>(11) 94354-2533</li>
               <li>contato@moustachedrinks.com.br</li>
               <li>São Paulo, SP</li>
-              <li className="text-sm">Seg-Sex: 9h-18h | Sáb: 9h-14h</li>
+              <li className="text-sm mt-2 font-semibold text-foreground">Horário de Atendimento:</li>
+              <li className="text-sm">Seg a Sáb: 08:00 - 20:00</li>
+              <li className="text-sm">Domingo: Fechado</li>
             </ul>
           </div>
         </div>
