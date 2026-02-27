@@ -73,7 +73,7 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4 text-foreground">Contato</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li>(11) 94354-2533</li>
-              <li>contato@moustachedrinks.com.br</li>
+              <li>diegomoraes99@gmail.com</li>
               <li>São Paulo, SP</li>
               <li className="text-sm mt-2 font-semibold text-foreground">Horário de Atendimento:</li>
               <li className="text-sm">Seg a Sáb: 08:00 - 20:00</li>
