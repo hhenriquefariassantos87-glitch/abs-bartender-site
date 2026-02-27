@@ -30,7 +30,7 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: Phone, label: "Telefone", value: "(11) 94354-2533" },
-    { icon: Mail, label: "Email", value: "contato@moustachedrinks.com.br" },
+    { icon: Mail, label: "Email", value: "diegomoraes99@gmail.com" },
     { icon: MapPin, label: "Localização", value: "São Paulo, SP" },
     { icon: Clock, label: "Horário", value: "Seg a Sáb: 08:00 - 20:00 | Dom: Fechado" },
   ];
