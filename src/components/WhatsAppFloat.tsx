@@ -6,7 +6,7 @@ const WhatsAppFloat = () => {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3 items-center">
       <Button
-        onClick={() => window.open("https://www.instagram.com/moustachedrinksebartenders", "_blank")}
+        onClick={() => window.open("https://www.instagram.com/moustached_bartenders?igsh=ZHkwejIxZTUzYWE0", "_blank")}
         className="h-14 w-14 rounded-full bg-gradient-to-br from-[#f09433] via-[#dc2743] to-[#bc1888] hover:opacity-90 shadow-glow p-0"
         aria-label="Instagram"
       >
