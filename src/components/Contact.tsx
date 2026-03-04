@@ -84,8 +84,11 @@ const Contact = () => {
                       </SelectTrigger>
                       <SelectContent className="bg-popover border-border z-50">
                         <SelectItem value="casamento">Casamento</SelectItem>
+                        <SelectItem value="aniversario">Aniversário</SelectItem>
                         <SelectItem value="formatura">Formatura</SelectItem>
-                        <SelectItem value="festa-aniversario">Festa de Aniversário</SelectItem>
+                        <SelectItem value="corporativo">Corporativo</SelectItem>
+                        <SelectItem value="confraternizacao">Confraternização</SelectItem>
+                        <SelectItem value="bodas">Bodas</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
