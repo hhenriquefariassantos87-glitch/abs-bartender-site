@@ -118,6 +118,9 @@ const Packages = () => {
               Os valores variam de acordo com a quantidade de convidados, drinks escolhidos e tipos de destilados da sua preferência. Você receberá um orçamento completo com descritivos detalhados.
             </p>
             <p className="text-muted-foreground leading-relaxed">
+              <span className="text-primary font-semibold">Mínimo de 30 convidados.</span> A cada 30 pessoas, é disponibilizado <span className="text-primary font-semibold">1 bartender</span>.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
               Caso tenha preferência por drinks fora de nossa cartilha, podemos incluir conforme sua preferência. Trabalhamos com <span className="text-primary font-semibold">cartilhas personalizadas</span>.
             </p>
           </CardContent>
