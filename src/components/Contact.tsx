@@ -102,7 +102,8 @@ const Contact = () => {
                     />
                     <Input
                       type="number"
-                      placeholder="Número de convidados"
+                      min="30"
+                      placeholder="Mínimo 30 convidados"
                       value={formData.convidados}
                       onChange={(e) => setFormData({ ...formData, convidados: e.target.value })}
                       className="bg-background border-border"
