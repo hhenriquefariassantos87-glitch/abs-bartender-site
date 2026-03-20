@@ -27,7 +27,7 @@ const Hero = () => {
     >
       <div className="absolute inset-0 bg-black/70 md:bg-black/60"></div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 pt-24 md:pt-0">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="font-display text-4xl sm:text-5xl md:text-7xl font-bold mb-6 tracking-tight leading-tight">
             <span className="text-foreground">Bartenders Premium</span>
