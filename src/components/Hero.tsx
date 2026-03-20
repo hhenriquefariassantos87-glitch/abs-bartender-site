@@ -19,12 +19,15 @@ const Hero = () => {
     <section
       id="início"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `url(${heroBackground})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
     >
+      <div
+        className="absolute inset-0 bg-cover bg-center md:bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${heroBackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center 30%",
+        }}
+      ></div>
       <div className="absolute inset-0 bg-black/70 md:bg-black/60"></div>
 
       <div className="container mx-auto px-4 relative z-10 pt-24 md:pt-0">
