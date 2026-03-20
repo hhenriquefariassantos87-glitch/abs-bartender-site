@@ -24,7 +24,7 @@ const Footer = () => {
               <span className="text-xl font-script text-white">Moustache Drinks</span>
             </div>
             <p className="text-muted-foreground mb-4">
-              Transformando eventos em experiências inesquecíveis há mais de 10 anos.
+              Transformando eventos em experiências inesquecíveis há mais de 5 anos.
             </p>
             <div className="flex gap-4">
               <a

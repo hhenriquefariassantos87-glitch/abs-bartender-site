@@ -6,7 +6,7 @@ const Differentials = () => {
     {
       icon: Award,
       title: "Satisfação Garantida",
-      description: "Equipe qualificada com mais de 10 anos de experiência no mercado",
+      description: "Equipe qualificada com mais de 5 anos de experiência no mercado",
     },
     {
       icon: Shield,
