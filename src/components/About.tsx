@@ -7,7 +7,7 @@ const About = () => {
 
   const stats = [
     { value: "500+", label: "Eventos Realizados" },
-    { value: "10+", label: "Anos de Experiência" },
+    { value: "5+", label: "Anos de Experiência" },
   ];
 
   return (
