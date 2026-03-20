@@ -3,7 +3,7 @@ import heroBackground from "@/assets/hero-background-novo.jpg";
 
 const Hero = () => {
   const stats = [
-    { value: "10+", label: "Anos de Experiência" },
+    { value: "5+", label: "Anos de Experiência" },
     { value: "500+", label: "Eventos Realizados" },
     { value: "100%", label: "Satisfação" },
   ];
@@ -34,7 +34,7 @@ const Hero = () => {
             <span className="bg-gradient-primary bg-clip-text text-transparent">eventos</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
-            Mais de 10 anos criando experiências inesquecíveis com coquetéis exclusivos e atendimento de excelência
+            Mais de 5 anos criando experiências inesquecíveis com coquetéis exclusivos e atendimento de excelência
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">

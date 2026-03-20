@@ -7,7 +7,7 @@ const About = () => {
 
   const stats = [
     { value: "500+", label: "Eventos Realizados" },
-    { value: "10+", label: "Anos de Experiência" },
+    { value: "5+", label: "Anos de Experiência" },
   ];
 
   return (
@@ -29,7 +29,7 @@ const About = () => {
               Sobre a <span className="text-primary font-script">Moustache Drinks</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Há mais de 10 anos no mercado, somos especializados em criar experiências inesquecíveis
+              Há mais de 5 anos no mercado, somos especializados em criar experiências inesquecíveis
               em casamentos, aniversários e eventos corporativos. Nossa equipe de bartenders profissionais
               traz toda expertise e paixão para transformar seu evento em um momento único.
             </p>
