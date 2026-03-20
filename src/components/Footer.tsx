@@ -1,4 +1,4 @@
-import { Instagram, Facebook } from "lucide-react";
+import { Instagram } from "lucide-react";
 import logo from "@/assets/moustache-logo.jpg";
 
 const Footer = () => {
@@ -32,12 +32,6 @@ const Footer = () => {
                 className="p-2 rounded-full bg-gradient-accent hover:bg-primary transition-colors"
               >
                 <Instagram className="h-5 w-5 text-primary hover:text-primary-foreground" />
-              </a>
-              <a
-                href="#"
-                className="p-2 rounded-full bg-gradient-accent hover:bg-primary transition-colors"
-              >
-                <Facebook className="h-5 w-5 text-primary hover:text-primary-foreground" />
               </a>
             </div>
           </div>
