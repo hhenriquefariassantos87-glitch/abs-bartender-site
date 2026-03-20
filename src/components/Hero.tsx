@@ -3,7 +3,7 @@ import heroBackground from "@/assets/hero-background-novo.jpg";
 
 const Hero = () => {
   const stats = [
-    { value: "10+", label: "Anos de Experiência" },
+    { value: "5+", label: "Anos de Experiência" },
     { value: "500+", label: "Eventos Realizados" },
     { value: "100%", label: "Satisfação" },
   ];
