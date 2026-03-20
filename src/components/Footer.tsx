@@ -33,12 +33,6 @@ const Footer = () => {
               >
                 <Instagram className="h-5 w-5 text-primary hover:text-primary-foreground" />
               </a>
-              <a
-                href="#"
-                className="p-2 rounded-full bg-gradient-accent hover:bg-primary transition-colors"
-              >
-                <Facebook className="h-5 w-5 text-primary hover:text-primary-foreground" />
-              </a>
             </div>
           </div>
 
